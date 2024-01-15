@@ -1,0 +1,544 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000; /* Здесь вы можете изменить цвет фона экрана загрузки */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 9999;
+
+}
+
+#loader {
+    color: rgb(220, 220, 220);
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+#video {
+    width: 20%;
+    height: 20%;
+}
+
+
+body {
+    background-image: url("static/backgroundimg.jpeg");
+
+    height: 2559px;
+    width: 4095px;
+
+    background-position: center center;
+    /* определяет размер изображения на странице */
+    background-size: cover;
+    /* свойство устанавливает, будет ли повторяться изображение и каким образом */
+    background-repeat: no-repeat;
+    /* cвойство определяет, будет ли фоновое изображение прокручиваться 
+    вместе с остальной частью страницы или будет фиксированным */
+    background-attachment: fixed;
+
+    overflow: hidden;
+    -webkit-user-select: none;
+    user-select: none;
+    margin: 0;
+    padding: 0;
+
+    color: rgb(220, 220, 220);
+    text-shadow: 3px 4px 5px rgb(40, 40, 40);
+}
+
+
+
+
+.led-green {
+    width: 12px;
+    height: 12px;
+    background-color: #0f0;
+    box-shadow: 0 -1px 7px 1px #000,inset 0 -1px 9px #460,0 2px 12px #7d0;
+    opacity: 0;
+    transition: all 1s ease
+}
+
+.led-green {
+    margin: 20px auto;
+    border-radius: 50%
+}
+
+
+.tvremotebackground {
+    border: 5px solid #525252;
+    border-radius: 15px;
+    background-image: linear-gradient(45deg,#525252,#b6b6b6 49%,#525252);
+    position: absolute;
+    /*box-shadow: 10px 10px 5px rgba(0,0,0,.5);*/
+    width: 130px;
+    height: 200px
+}
+
+#tubeglow {
+    position: absolute;
+    left: 102px;
+    top: 66px;
+    width: 622px;
+    height: 358px;
+    z-index: 50;
+    text-align: center;
+    text-indent: .1em
+}
+
+
+#tvled {
+    position: absolute;
+    z-index: 10;
+    left: 443px;
+    top: 464px
+}
+
+
+#lcdbar {
+    font-family: "lcdfont";
+    line-height: 20px;
+    font-size: 14px;
+    text-shadow: 4px 4px 10px #add8e6;
+    font-weight: 400;
+    color: #add8e6;
+    left: 48px;
+    top: 562px;
+    width: 744px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden
+}
+
+#sidebar {
+    position: absolute;
+    width: 146px;
+    z-index: 10;
+    left: 972px;
+    top: 20px
+}
+
+
+.fadable {
+    opacity: 0;
+    transition: opacity .8s ease
+}
+
+#logo {
+    position: absolute;
+    z-index: 10;
+    left: 630px;
+    top: 445px
+}
+
+:root {
+    color-scheme: light only
+}
+
+
+#tvfilters {
+    position: absolute;
+    z-index: 10;
+    left: 1200px;
+    top: 20px;
+    background-color: rgb(0 0 0 / 35%);
+    border: 5px solid transparent;
+    background: linear-gradient(to bottom right, #349b5c, #4d6581);
+    box-shadow: inset 0px 0px 0px 100vw rgb(0 0 0 / 35%); 
+    border-image-slice: 1;
+    border-radius: 15px;
+}
+
+/*#tvfilters {
+    position: absolute;
+    z-index: 10;
+    left: 832px;
+    top: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 5px solid;
+    border-image: linear-gradient(to bottom right, #10522A, #B2C4D9);
+    border-image-slice: 1;
+  }*/
+
+#tvfilters span {
+    color: #94ceaa
+}
+
+
+input[type=checkbox] {
+    font-family: Arial,sans-serif;
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    color: grey;
+    font-size: 11px
+}
+
+input[type=checkbox]+label.css-label {
+    font-family: Arial,sans-serif;
+    padding-left: 20px;
+    height: 15px;
+    display: block;
+    line-height: 15px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    font-size: 15px;
+    cursor: pointer;
+    color: grey;
+    font-size: 11px;
+    margin-bottom: 5px
+}
+
+input[type=checkbox]:checked+label.css-label {
+    font-family: Arial,sans-serif;
+    background-position: 0 -15px;
+    color: #94ceaa;
+    font-size: 11px
+}
+
+
+#remotestatus {
+    width: 270px;
+    height: 28px;
+    top: 552px;
+    font-family: "blippo",monospace;
+    color: #94ceaa;
+    text-align: left;
+    font-size: 14px;
+    line-height: 14px
+}
+
+
+#remotestatus,#tvbuttons {
+    position: absolute;
+    z-index: 10;
+    left: 832px
+}
+
+#tvbuttons {
+    top: 346px;
+    line-height: 28px;
+    margin-bottom: 0
+}
+
+#btn_power {
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #3f0808;
+    width: 30px;
+    height: 25px;
+    background-color: #731717;
+    outline: none;
+    border-radius: 30px;
+    border: 1px solid #525252;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 50%),inset 0 0 1px hsl(0deg 0% 0% / 70%);
+    text-shadow: 0 -1px 0 rgb(0 0 0 / 40%),0 1px 0 hsl(0deg 0% 100% / 30%);
+    position: inherit;
+    cursor: pointer;
+    overflow: visible;
+    padding: 0
+}
+
+#btn_next, #btn_prev {
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #4a4a4a;
+    width: 120px;
+    height: 27px;
+    background-color: #a3a3a3;
+    outline: none;
+    border-radius: 30px;
+    border: 1px solid #525252;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 50%),inset 0 0 1px hsl(0deg 0% 0% / 70%);
+    text-shadow: 0 -1px 0 rgb(0 0 0 / 40%),0 1px 0 hsl(0deg 0% 100% / 30%);
+    position: inherit;
+    cursor: pointer;
+    overflow: visible;
+    padding: 0
+}
+
+#btn_voldn, #btn_volup {
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #4a4a4a;
+    width: 53px;
+    height: 27px;
+    background-color: #a3a3a3;
+    outline: none;
+    border-radius: 30px;
+    border: 1px solid #525252;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 50%),inset 0 0 1px hsl(0deg 0% 0% / 70%);
+    text-shadow: 0 -1px 0 rgb(0 0 0 / 40%),0 1px 0 hsl(0deg 0% 100% / 30%);
+    position: inherit;
+    cursor: pointer;
+    overflow: visible;
+    padding: 0
+}
+
+#btn_menu {
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #123e0c;
+    width: 120px;
+    height: 25px;
+    background-color: #39653d;
+    outline: none;
+    border-radius: 30px;
+    border: 1px solid #525252;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 50%),inset 0 0 1px hsl(0deg 0% 0% / 70%);
+    text-shadow: 0 -1px 0 rgb(0 0 0 / 40%),0 1px 0 hsl(0deg 0% 100% / 30%);
+    position: inherit;
+    cursor: pointer;
+    overflow: visible;
+    padding: 0
+}
+
+button.tvremotebutton-on {
+    background-color: rgb(174, 174, 174)
+}
+
+
+
+#iconsuggest {
+    position: absolute;
+    z-index: 10;
+    left: 918px;
+    top: 512px;
+    cursor: pointer
+}
+
+#icontwitter {
+    left: 880px;
+    position: absolute;
+    z-index: 10;
+    top: 510px;
+    cursor: pointer
+}
+
+
+#myytplayer {
+    position: absolute;
+    z-index: 0;
+    left: 95px;
+    top: 65px;
+    width: 640px;
+    height: 360px;
+    visibility: hidden
+}
+
+
+#tvbackground {
+    position: absolute;
+    z-index: 1;
+    left: 140px;
+    top: 20px;
+    border: 0 solid #000
+}
+
+#tvstatic {
+    position: absolute;
+    z-index: 2;
+    left: 140px;
+    top: 67px;
+    opacity: 0;
+    width: 640px;
+    height: 360px;
+    background: repeating-linear-gradient(0deg,#000,#302e2e 4px,#000)
+}
+
+#tvstencil {
+    position: absolute;
+    z-index: 0;
+    left: 140px;
+    top: 38px
+}
+
+span.chanspan {
+    background-color: #000
+}
+
+.status-red {
+    color: red
+}
+
+
+#guide {
+    z-index: 11;
+    left: 766px;
+    top: 528px
+}
+
+#credit,#guide {
+    position: absolute
+}
+
+#credit {
+    z-index: 10;
+    left: 34px;
+    font-size: small;
+    color: rgb(86 131 187);
+    top: 602px;
+    width: 766px;
+    text-align: center
+}
+
+
+a:active,a:hover,a:link,a:visited {
+    text-decoration: none;
+}
+
+.sideitem {
+    width: 128px;
+    padding-bottom: 10px
+}
+
+.sideitem img {
+    display: block;
+    margin: auto
+}
+
+
+.action-button {
+    line-height: 20px;
+    height: px;
+    min-width: 128px;
+    text-decoration: none;
+    display: inline-flex;
+    color: #fff;
+    border-radius: 15px;
+    border: 3px solid #460;
+    padding: 7px 11px 7px 2px;
+    letter-spacing: -.0.8px;
+    box-shadow: 0 1px 2px hsla(0,0%,74.5%,.5);
+    margin: 0 auto;
+    font-family: "Lato",sans-serif;
+    font-size: 11px;
+    box-sizing: border-box;
+    transition: all .3s linear
+}
+
+.action-button:active,.action-button:focus,.action-button:hover {
+    text-decoration: none!important;
+    box-shadow: 0 1px 2px 2px rgba(119,118,118,.5);
+    opacity: .85;
+    color: #fff
+}
+
+.bmc-button img {
+    height: 24px!important;
+    margin: auto;
+    box-shadow: none!important;
+    border: none!important;
+    vertical-align: middle!important
+}
+
+.bmc-button {
+    background-color: #4d7660
+}
+
+
+#glass {
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1
+}
+
+
+.notransitions {
+    transition: none!important
+}
+
+.noclicky {
+    pointer-events: none
+}
+
+.tvcurtain {
+    position: absolute!important;
+    z-index: 9!important;
+    left: 825px!important;
+    top: 0!important;
+    right: 0!important;
+    height: 510px!important;
+    background-color: #00000000!important
+}
+
+
+
+
+
+
+/*button.tvremote {
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #525252;
+    width: 90px;
+    height: 25px;
+    background-color: #a3a3a3;
+    outline: none;
+    border-radius: 30px;
+    border: 1px solid #525252;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 50%),inset 0 0 1px hsl(0deg 0% 0% / 70%);
+    text-shadow: 0 -1px 0 rgb(0 0 0 / 40%),0 1px 0 hsl(0deg 0% 100% / 30%);
+    position: inherit;
+    cursor: pointer;
+    overflow: visible;
+    padding: 0
+}
+
+button.tvremotebutton-on {
+    background-color: #b6b6b6
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+h1{
+    font-family: "SegoeUI_Semibold";
+}
+
+p{
+    font-family: "SegoeUI_Regular";
+}
+
+
+
+@font-face {
+    font-family: "SegoeUI_Regular";  
+    src: url("sitefonts/SegoeUI.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal;
+}
+     
+@font-face{
+    font-family: "SegoeUI_Semibold";
+    src: url("sitefonts/SegoeUI-SemiBold.ttf") format("truetype");
+    font-style: normal; 
+    font-weight: normal; 
+}
